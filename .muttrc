@@ -9,15 +9,13 @@ set edit_headers=yes
 #set folder = "imaps://imap.gmail.com:993"
 #set spoolfile = "+INBOX"
 #set postponed ="+[Google Mail]/Drafts"
-
-set mbox_type=Maildir
-set folder = "~/Mail"
-set spoolfile=+inbox
-
-set move = no
-set postponed=+drafts
-unset mark_old
-set mail_check=10
+#set sentmail = "+[Google Mail]/Sent"
+#set header_cache="~/Mail/headercache"
+set mbox_type = Maildir
+set folder = ~/Mail/Gmail
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+mailboxes +INBOX
 
 set sort = reverse-date-received
 bind index G sync-mailbox
