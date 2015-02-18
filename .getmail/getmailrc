@@ -1,0 +1,16 @@
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop.gmail.com
+username = adderan@ucsc.edu
+port = 995
+password = 123
+
+[destination]
+type = MDA_external
+path = /usr/bin/procmail
+arguments = ("-f", "%(sender)", "-m", "/home/alden/.procmailrc")
+
+[options]
+read_all = False
+verbose = 0
+delete = True
