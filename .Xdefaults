@@ -1,21 +1,39 @@
-URxvt*transparent: false
-URxvt*tintColor: Green
-#URxvt*shading: 40
-URxvt*saveLines: 12000
-URxvt*foreground: White
-URxvt*background: Black
-#URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=14:antialias=true:hinting=true
-#URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=15:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=15:antialias=true:hinting=true
-#URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
-#URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
-#URxvt*font: xft:terminus:pixelsize=15
-#URxvt*boldFont: xft:terminus:bold:pixelsize=15
-#URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
-#URxvt*boldFont:-*-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
-URxvt*scrollBar: false
-URxvt*scrollBar_right: false
-URxvt*scrollstyle: rxvt
+urxvt*font:             9x15
+urxvt*termName:         rxvt
+urxvt*background:       black
+urxvt*foreground:       white
+urxvt*scrollBar:        false
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher
+urxvt*urlLauncher:      /opt/mozilla/bin/firefox
+urxvt*matcher.button:   1
+#urxvt*fading:           50
+#urxvt*fadeColor:        #000000
+
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+urxvt*background:       rgba:0000/0000/0000/cccc
+
+URxvt.transparent:   true
+URxvt.tintColor:     black
+URxvt.shading:       18 
+ 
+URxvt*color0:      #000000
+URxvt*color1:      #9e1828
+URxvt*color2:      #aece92
+URxvt*color3:      #968a38
+URxvt*color4:      #414171
+URxvt*color5:      #963c59
+URxvt*color6:      #418179
+URxvt*color7:      #bebebe
+URxvt*color8:      #666666
+URxvt*color9:      #cf6171
+URxvt*color10:     #c5f779
+URxvt*color11:     #fff796
+URxvt*color12:     #4186be
+URxvt*color13:     #cf9ebe
+URxvt*color14:     #71bebe
+URxvt*color15:     #ffffff
+
