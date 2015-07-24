@@ -9,11 +9,9 @@ set nohlsearch
 let &titlestring = @%
 
 set title
-set mouse=a
+set mouse=nicr
 set number
-execute pathogen#infect()
 let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
-
