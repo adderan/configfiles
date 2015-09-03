@@ -9,10 +9,14 @@ set expandtab
 set nohlsearch
 let &titlestring = @%
 
-:set guioptions -=T
 set title
-set number
 let mapleader = ","
+set number
 nmap <leader>ne :NERDTree<cr>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-k> :Bclose<CR>
+
+set guioptions -=T
+set guioptions -=r
+set guioptions -=L
