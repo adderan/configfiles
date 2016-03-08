@@ -7,6 +7,7 @@ export TERM=screen-256color
 export EDITOR='emacsclient -c -t'
 export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -c -t'
+alias gitlog='git log --pretty --oneline'
 
 
 # If not running interactively, don't do anything
