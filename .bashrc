@@ -2,12 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export CGCLOUD_ZONE=us-west-2a
-export CGCLOUD_PLUGINS="cgcloud.toil:cgcloud.cactusCluster"
+export CGCLOUD_PLUGINS="cgcloud.toil:cgcloud.cactusCluster:cgcloud.jenkins"
 export TERM=screen-256color
 export EDITOR='emacsclient -c -t'
 export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -c -t'
 alias gitlog='git log --pretty --oneline'
+
+alias kolossus="autossh kolossus -t '. .profile && TMPDIR=/scratch/tmp tmux a'"
 
 
 # If not running interactively, don't do anything
@@ -65,11 +67,13 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
 unset color_prompt force_color_prompt
+
+PROMPT_DIRTRIM=2
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
