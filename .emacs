@@ -2,7 +2,7 @@
 (package-initialize)
 
 (setq default-frame-alist
-      '((background-color . "grey0")
+      '((background-color . "grey15")
 	(foreground-color . "#f6f3e8")))
 
 
@@ -24,9 +24,9 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 
-(ac-config-default)
-(define-key ac-complete-mode-map "\C-n" 'ac-next)
-(define-key ac-complete-mode-map "\C-p" 'ac-previous)
+;(ac-config-default)
+;(define-key ac-complete-mode-map "\C-n" 'ac-next)
+;(define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
 (require 'dtrt-indent)
 (dtrt-indent-mode 1)
