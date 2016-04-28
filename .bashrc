@@ -4,9 +4,7 @@
 export CGCLOUD_ZONE=us-west-2a
 export CGCLOUD_PLUGINS="cgcloud.toil:cgcloud.cactusCluster:cgcloud.jenkins"
 export TERM=screen-256color
-export EDITOR='emacsclient -c -t'
-export ALTERNATE_EDITOR=""
-alias emacs='emacsclient -c -t'
+export EDITOR='vim'
 alias gitlog='git log --pretty --oneline'
 
 alias kolossus="autossh kolossus -t '. .profile && TMPDIR=/scratch/tmp tmux a'"
