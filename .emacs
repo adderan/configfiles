@@ -15,6 +15,9 @@
 
 (global-undo-tree-mode)
 
+(require 'ido)
+(ido-mode t)
+
 
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
@@ -28,5 +31,5 @@
 ;(define-key ac-complete-mode-map "\C-n" 'ac-next)
 ;(define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
-(require 'dtrt-indent)
-(dtrt-indent-mode 1)
+;(require 'dtrt-indent)
+;(dtrt-indent-mode 1)

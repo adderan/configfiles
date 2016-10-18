@@ -4,11 +4,18 @@
 export CGCLOUD_ZONE=us-west-2a
 export CGCLOUD_PLUGINS="cgcloud.toil:cgcloud.cactusCluster:cgcloud.jenkins"
 export TERM=screen-256color
-export EDITOR='vim'
+export EDITOR='emacsclient -c -t'
+export ALTERNATE_EDITOR=""
 alias gitlog='git log --pretty --oneline'
+
 
 alias kolossus="autossh kolossus -t '. .profile && TMPDIR=/scratch/tmp tmux a'"
 
+export PYTHONPATH=$PYTHONPATH:/home/alden/sonLib
+
+alias vi='emacsclient -c -t'
+alias vim='emacsclient -c -t'
+alias emacs='emacsclient -c -t'
 
 # If not running interactively, don't do anything
 case $- in
@@ -124,4 +131,12 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+PROMPT_COMMAND="${PROMPT_COMMAND}"$'\necho -n "\033]0;${HOSTNAME}: ${PWD}\007"'
+
+export PATH=/home/alden/bin:/home/alden/.local/bin:/home/alden/bin:/home/alden/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/alden/.vimpkg/bin
+
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/share/powerline/bindings/bash/powerline.sh
 fi

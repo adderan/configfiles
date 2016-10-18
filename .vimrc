@@ -1,8 +1,7 @@
 set t_Co=256
 syn on se title
 filetype plugin indent on
-colorscheme gruvbox
-set background=dark
+colorscheme monokai
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
