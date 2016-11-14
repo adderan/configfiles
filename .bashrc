@@ -2,11 +2,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export CGCLOUD_ZONE=us-west-2a
-export CGCLOUD_PLUGINS="cgcloud.toil:cgcloud.cactusCluster:cgcloud.jenkins"
 export TERM=screen-256color
 export EDITOR='emacsclient -c -t'
 export ALTERNATE_EDITOR=""
 alias gitlog='git log --pretty --oneline'
+
+export CGCLOUD_PLUGINS="cgcloud.toil:$CGCLOUD_PLUGINS"
 
 
 alias kolossus="autossh kolossus -t '. .profile && TMPDIR=/scratch/tmp tmux a'"
