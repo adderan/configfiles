@@ -27,9 +27,7 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 
-;(ac-config-default)
-;(define-key ac-complete-mode-map "\C-n" 'ac-next)
-;(define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
-;(require 'dtrt-indent)
-;(dtrt-indent-mode 1)
+(add-hook 'c-mode-common-hook (lambda ()
+				(local-set-key (kbd "RET") 'newline-and-indent)))
+(setq c-basic-offset 4)

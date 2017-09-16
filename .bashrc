@@ -3,7 +3,7 @@
 # for examples
 export CGCLOUD_ZONE=us-west-2a
 export TERM=screen-256color
-export EDITOR='emacsclient -c -t'
+export EDITOR="emacsclient -c -t"
 export ALTERNATE_EDITOR=""
 alias gitlog='git log --pretty --oneline'
 
@@ -14,9 +14,6 @@ alias kolossus="autossh kolossus -t '. .profile && TMPDIR=/scratch/tmp tmux a'"
 
 export PYTHONPATH=$PYTHONPATH:/home/alden/sonLib
 
-alias vi='emacsclient -c -t'
-alias vim='emacsclient -c -t'
-alias emacs='emacsclient -c -t'
 
 # If not running interactively, don't do anything
 case $- in
