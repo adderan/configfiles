@@ -1,39 +1,63 @@
-urxvt*font:             9x15
-urxvt*termName:         rxvt
-urxvt*background:       black
-urxvt*foreground:       white
-urxvt*scrollBar:        false
-urxvt*perl-lib:         /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:  default,matcher
-urxvt*urlLauncher:      /opt/mozilla/bin/firefox
-urxvt*matcher.button:   1
-#urxvt*fading:           50
-#urxvt*fadeColor:        #000000
+!! Appearance
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+!! Font prefferenes
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:weight=bold
+urxvt.letterSpace: -1
+!! Larger history limit
+urxvt.saveLines: 1000000
 
-Xft*dpi:                96
-Xft*antialias:          true
-Xft*hinting:            full
+!! Perl extensions
+urxvt.perl-ext-common: default,matcher,font-size
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+!! Change font size on Control-Plus/Minus
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
 
-urxvt*background:       rgba:0000/0000/0000/cccc
+!! Yeah, I am one of those, who use these keys in Vim :-(
+urxvt.keysym.Home:          \033[1~
+urxvt.keysym.End:           \033[4~
+urxvt.keysym.Control-Up:    \033[1;5A
+urxvt.keysym.Control-Down:  \033[1;5B
+urxvt.keysym.Control-Left:  \033[1;5D
+urxvt.keysym.Control-Right: \033[1;5C
 
-URxvt.transparent:   true
-URxvt.tintColor:     black
-URxvt.shading:       18 
- 
-URxvt*color0:      #000000
-URxvt*color1:      #9e1828
-URxvt*color2:      #aece92
-URxvt*color3:      #968a38
-URxvt*color4:      #414171
-URxvt*color5:      #963c59
-URxvt*color6:      #418179
-URxvt*color7:      #bebebe
-URxvt*color8:      #666666
-URxvt*color9:      #cf6171
-URxvt*color10:     #c5f779
-URxvt*color11:     #fff796
-URxvt*color12:     #4186be
-URxvt*color13:     #cf9ebe
-URxvt*color14:     #71bebe
-URxvt*color15:     #ffffff
+! special
+ *.foreground:   #c0c5ce
+ *.background:   #2b303b
+ *.cursorColor:  #c0c5ce
 
+ ! black
+ *.color0:       #2b303b
+ *.color8:       #65737e
+
+ ! red
+ *.color1:       #bf616a
+ *.color9:       #bf616a
+
+ ! green
+ *.color2:       #a3be8c
+ *.color10:      #a3be8c
+
+ ! yellow
+ *.color3:       #ebcb8b
+ *.color11:      #ebcb8b
+
+ ! blue
+ *.color4:       #8fa1b3
+ *.color12:      #8fa1b3
+
+ ! magenta
+ *.color5:       #b48ead
+ *.color13:      #b48ead
+
+ ! cyan
+ *.color6:       #96b5b4
+ *.color14:      #96b5b4
+
+ ! white
+ *.color7:       #c0c5ce
+ *.color15:      #eff1f5
