@@ -12,17 +12,18 @@
 #
 exec --no-startup-id xset r rate 200 35
 exec --no-startup-id setxkbmap -option ctrl:nocaps
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id mpd ~/.config/mpd/mpd.conf
 
-exec xinput --disable 12
+exec xinput --disable 11
 
 for_window [class="^.*"] border pixel 1
 
 set $mod Mod1
 
 gaps inner 5
-gaps outer 5
+gaps outer 0
 
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute; amixer -q sset Headphone,0 100+ unmute; amixer -q sset PCM 1000+"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute; amixer -q sset Headphone,0 100+ unmute; amixer -q sset PCM,0 1000+"
@@ -170,7 +171,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     font pango:Source Sans Pro-9 9
-    status_command i3status
+    status_command bumblebee-status -m battery nic disk datetime -p datetime.format="%a, %b %d, %Y at %I:%M %p" nic.exclude="lo,virbr,vboxnet,veth,enp" -t solarized-powerline
     colors {
         separator #268bd2
         background #002b36
