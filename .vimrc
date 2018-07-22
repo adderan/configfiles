@@ -1,17 +1,16 @@
-set t_Co=256
-syn on se title
-set nu
-filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
 
+set t_Co=256
+syn on se title
+filetype plugin indent on
 colorscheme gruvbox
 set background=dark
-
 set nohlsearch
 let &titlestring = @%
 
 set title
+let mapleader = ","
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nmap <silent> <C-k> :bp\|bd #<CR>
@@ -22,13 +21,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 set autochdir
 
-" Go down only one wrapped line
-nnoremap k gk
+" Move one physical line at a time in latex
 nnoremap j gj
+nnoremap k gk
 
-" Latex compilation
-nnoremap <leader>c :w<CR>:!rubber --pdf --warn all %<CR>
-
-" powerline
-let g:powerline_pycmd="py3"
-set laststatus=2
+" Airline theme
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
