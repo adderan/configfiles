@@ -1,7 +1,7 @@
 set nocompatible
 
 syntax enable
-filetype plugin on
+filetype plugin indent on
 set path+=**
 
 set wildmenu
@@ -22,7 +22,9 @@ set autochdir
 set autoindent
 
 colorscheme dracula
+let g:dracula_italic=0
 set background=dark
 
 set t_Co=256
 
+set number
