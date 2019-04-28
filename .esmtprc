@@ -1,7 +1,0 @@
-identity "adderan@ucsc.edu"
-hostname smtp.gmail.com:587
-username "adderan@ucsc.edu"
-password "123"
-starttls required 
-
-

@@ -1,3 +1,5 @@
+URxvt.termName: rxvt-unicode-256color
+
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36
@@ -23,5 +25,9 @@ URxvt.font:     xft:Monospace:size=10:antialias=true
 URxvt.boldFont: xft:Monospace:bold:size=10:antialias=true
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
-URxvt.iconFile: /usr/share/icons/gnome/32x32/apps/gnome-terminal.png
 URxvt.cursorBlink: true
+
+
+!URxvt.transparent: true
+!URxvt.tintColor: #443344
+!URxvt.fading: 10%
