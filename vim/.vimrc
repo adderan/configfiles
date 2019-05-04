@@ -1,3 +1,10 @@
+call plug#begin('~/.vim/bundle')
+Plug 'scrooloose/nerdtree'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
 set nocompatible
 
 syntax enable
@@ -5,7 +12,6 @@ filetype plugin indent on
 set path+=**
 
 set wildmenu
-execute pathogen#infect()
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -13,7 +19,6 @@ nmap <silent> <C-k> :bp\|bd #<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 
-" Allow moving one line in wrapped latex text
 nnoremap j gj
 nnoremap k gk
 
@@ -22,7 +27,7 @@ set laststatus=2
 set autochdir
 set autoindent
 
-colorscheme gruvbox
+colorscheme dracula
 let g:dracula_italic=0
 set background=dark
 
@@ -34,6 +39,29 @@ set guioptions-=L
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-set guifont="Monospace 10"
+set guifont=Noto\ Mono\ Regular\ 10
+
 
 set mouse=c
+
+if has("gui_running")
+	if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+	endif
+
+	" unicode symbols
+	let g:airline_left_sep = '»'
+	let g:airline_left_sep = '▶'
+	let g:airline_right_sep = '«'
+	let g:airline_right_sep = '◀'
+	let g:airline_symbols.linenr = '␊'
+	let g:airline_symbols.linenr = '␤'
+	let g:airline_symbols.linenr = '¶'
+	let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.paste = 'ρ'
+	let g:airline_symbols.paste = 'Þ'
+	let g:airline_symbols.paste = '∥'
+	let g:airline_symbols.whitespace = 'Ξ'
+else
+	let g:loaded_airline = 1
+endif
