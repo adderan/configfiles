@@ -3,6 +3,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 set nocompatible
@@ -24,10 +26,9 @@ nnoremap k gk
 
 set laststatus=2
 
-set autochdir
 set autoindent
 
-colorscheme dracula
+colorscheme gruvbox
 let g:dracula_italic=0
 set background=dark
 
@@ -41,27 +42,22 @@ set guioptions-=T
 set guioptions-=r
 set guifont=Noto\ Mono\ Regular\ 10
 
-
 set mouse=c
 
-if has("gui_running")
-	if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-	endif
-
-	" unicode symbols
-	let g:airline_left_sep = '»'
-	let g:airline_left_sep = '▶'
-	let g:airline_right_sep = '«'
-	let g:airline_right_sep = '◀'
-	let g:airline_symbols.linenr = '␊'
-	let g:airline_symbols.linenr = '␤'
-	let g:airline_symbols.linenr = '¶'
-	let g:airline_symbols.branch = '⎇'
-	let g:airline_symbols.paste = 'ρ'
-	let g:airline_symbols.paste = 'Þ'
-	let g:airline_symbols.paste = '∥'
-	let g:airline_symbols.whitespace = 'Ξ'
-else
-	let g:loaded_airline = 1
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
 endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
