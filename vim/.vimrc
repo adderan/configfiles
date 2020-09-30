@@ -1,8 +1,7 @@
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
 call plug#end()
@@ -20,6 +19,7 @@ nnoremap <S-Tab> :bprevious<CR>
 nmap <silent> <C-k> :bp\|bd #<CR>
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-g> :Goyo \| set linebreak<CR>
 
 nnoremap j gj
 nnoremap k gk
@@ -28,7 +28,7 @@ set laststatus=2
 
 set autoindent
 
-colorscheme gruvbox
+colorscheme dracula
 let g:dracula_italic=0
 set background=dark
 
@@ -40,24 +40,8 @@ set guioptions-=L
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-set guifont=Noto\ Mono\ Regular\ 10
+set guifont=Roboto\ Mono\ For\ Powerline\ 10
 
 set mouse=c
 
-if !exists('g:airline_symbols')
-let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+set rtp+=/usr/share/vim/addons/
